@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mapa de Consultoría Notion · Sebastián Olmedo</title>
-<meta name="description" content="El recorrido para que tu equipo deje de perder información, tiempo y foco. Sistemas Notion con agentes IA nativos que el equipo sí usa.">
+<meta name="description" content="Te ayudo a que tu equipo deje de perder información, tiempo y foco. Sistemas Notion con agentes IA nativos que el equipo sí usa.">
 
 <!-- Open Graph para LinkedIn/WhatsApp -->
-<meta property="og:title" content="Mapa de Consultoría Notion">
-<meta property="og:description" content="El recorrido para que tu equipo deje de perder información, tiempo y foco.">
+<meta property="og:title" content="Mapa de Consultoría Notion · Sebastián Olmedo">
+<meta property="og:description" content="Te ayudo a que tu equipo deje de perder información, tiempo y foco.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="photo-circle.png">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +32,6 @@
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -48,7 +48,6 @@
     background-attachment: fixed;
   }
 
-  /* Subtle grain texture */
   body::before {
     content: '';
     position: fixed;
@@ -68,7 +67,7 @@
     z-index: 2;
   }
 
-  /* ===== HEADER ===== */
+  /* HEADER */
   .top-bar {
     display: flex;
     justify-content: space-between;
@@ -80,15 +79,32 @@
     text-transform: uppercase;
     color: var(--ink-muted);
   }
-
   .top-bar .brand { color: var(--ink); font-weight: 500; }
   .top-bar .meta { font-feature-settings: 'tnum'; }
 
-  /* ===== HERO ===== */
+  /* HERO con foto */
   .hero {
     padding: 96px 0 64px;
-    position: relative;
     animation: fadeUp 0.9s 0.1s ease-out backwards;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 64px;
+    align-items: start;
+  }
+  .hero-content { min-width: 0; }
+
+  .hero-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--amber);
+    box-shadow:
+      0 0 0 6px rgba(239, 159, 39, 0.08),
+      0 20px 60px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 3;
+    margin-top: 40px;
   }
 
   .eyebrow {
@@ -102,7 +118,6 @@
     margin-bottom: 32px;
     font-weight: 500;
   }
-
   .eyebrow::before {
     content: '';
     width: 32px;
@@ -113,13 +128,12 @@
   h1.title {
     font-family: 'Fraunces', serif;
     font-weight: 300;
-    font-size: clamp(44px, 7vw, 84px);
+    font-size: clamp(40px, 6.5vw, 76px);
     line-height: 0.98;
     letter-spacing: -0.025em;
     margin-bottom: 36px;
-    max-width: 13ch;
+    max-width: 14ch;
   }
-
   h1.title em {
     font-style: italic;
     font-weight: 400;
@@ -133,19 +147,20 @@
     line-height: 1.5;
     color: var(--ink-muted);
     max-width: 56ch;
-    margin-bottom: 56px;
+    margin-bottom: 0;
   }
 
-  /* Three pillars */
+  /* PILLARS */
+  .pillars-wrap {
+    padding-bottom: 32px;
+  }
   .pillars {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
     border-top: 1px solid var(--rule-strong);
     border-bottom: 1px solid var(--rule-strong);
-    margin-top: 24px;
   }
-
   .pillar {
     padding: 32px 28px 32px 0;
     border-right: 1px solid var(--rule);
@@ -162,7 +177,6 @@
     margin-bottom: 12px;
     letter-spacing: 0.04em;
   }
-
   .pillar .label {
     font-family: 'Fraunces', serif;
     font-weight: 400;
@@ -171,20 +185,18 @@
     color: var(--ink);
     margin-bottom: 8px;
   }
-
   .pillar .desc {
     font-size: 14px;
     line-height: 1.55;
     color: var(--ink-muted);
   }
 
-  /* ===== MAP SECTION ===== */
+  /* MAP SECTION */
   .map-intro {
     padding: 96px 0 48px;
     border-top: 1px solid var(--rule);
-    margin-top: 96px;
+    margin-top: 64px;
   }
-
   .section-label {
     font-size: 11px;
     letter-spacing: 0.24em;
@@ -193,7 +205,6 @@
     margin-bottom: 32px;
     font-weight: 500;
   }
-
   .map-intro h2 {
     font-family: 'Fraunces', serif;
     font-weight: 300;
@@ -203,7 +214,6 @@
     max-width: 18ch;
     margin-bottom: 24px;
   }
-
   .map-intro p {
     font-size: 16px;
     line-height: 1.6;
@@ -211,10 +221,8 @@
     max-width: 58ch;
   }
 
-  /* ===== PHASES ===== */
-  .phases {
-    padding-bottom: 96px;
-  }
+  /* PHASES */
+  .phases { padding-bottom: 96px; }
 
   .phase {
     display: grid;
@@ -225,14 +233,8 @@
     position: relative;
     transition: background 0.4s ease;
   }
-
-  .phase:hover {
-    background: rgba(239, 159, 39, 0.02);
-  }
-
-  .phase:last-child {
-    border-bottom: 1px solid var(--rule);
-  }
+  .phase:hover { background: rgba(239, 159, 39, 0.02); }
+  .phase:last-child { border-bottom: 1px solid var(--rule); }
 
   .phase-number {
     font-family: 'Fraunces', serif;
@@ -243,7 +245,6 @@
     letter-spacing: -0.04em;
     font-feature-settings: 'lnum';
   }
-
   .phase-number .of {
     display: block;
     font-size: 12px;
@@ -263,13 +264,11 @@
     letter-spacing: -0.015em;
     margin-bottom: 16px;
   }
-
   .phase-content h3 em {
     font-style: italic;
     color: var(--amber-soft);
     font-weight: 300;
   }
-
   .phase-content .what {
     font-size: 17px;
     line-height: 1.55;
@@ -285,7 +284,6 @@
     padding-top: 24px;
     border-top: 1px solid var(--rule);
   }
-
   .phase-meta dt {
     font-size: 10px;
     letter-spacing: 0.2em;
@@ -294,25 +292,22 @@
     margin-bottom: 8px;
     font-weight: 500;
   }
-
   .phase-meta dd {
     font-size: 15px;
     line-height: 1.5;
     color: var(--ink-muted);
   }
-
   .phase-meta dd strong {
     color: var(--ink);
     font-weight: 500;
   }
 
-  /* ===== PROMISE / CTA ===== */
+  /* PROMISE / CTA */
   .promise {
     padding: 96px 0;
     border-top: 1px solid var(--rule);
     text-align: center;
   }
-
   .promise .quote-mark {
     font-family: 'Fraunces', serif;
     font-size: 96px;
@@ -322,7 +317,6 @@
     margin-bottom: 16px;
     font-weight: 300;
   }
-
   .promise blockquote {
     font-family: 'Fraunces', serif;
     font-weight: 300;
@@ -330,10 +324,11 @@
     font-size: clamp(24px, 3.5vw, 38px);
     line-height: 1.25;
     letter-spacing: -0.015em;
-    max-width: 24ch;
+    max-width: 28ch;
     margin: 0 auto 48px;
     color: var(--ink);
   }
+  .promise blockquote em { color: var(--amber-soft); }
 
   .cta {
     display: inline-flex;
@@ -350,13 +345,11 @@
     border-radius: 2px;
     transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
-
   .cta:hover {
     background: var(--amber-soft);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(239, 159, 39, 0.2);
   }
-
   .cta-sub {
     margin-top: 20px;
     font-size: 13px;
@@ -364,7 +357,7 @@
     letter-spacing: 0.04em;
   }
 
-  /* ===== FOOTER ===== */
+  /* FOOTER */
   footer {
     padding: 48px 0 64px;
     border-top: 1px solid var(--rule);
@@ -374,50 +367,38 @@
     flex-wrap: wrap;
     gap: 16px;
   }
-
   footer .sig {
     font-family: 'Fraunces', serif;
     font-style: italic;
     font-size: 16px;
     color: var(--ink-muted);
   }
-
   footer .sig strong {
     font-style: normal;
     font-weight: 500;
     color: var(--ink);
   }
-
   footer .certs {
     font-size: 11px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--ink-faint);
   }
-
   footer .certs span {
     color: var(--amber);
     font-weight: 500;
   }
 
-  /* ===== ANIMATIONS ===== */
+  /* ANIMATIONS */
   @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(24px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-
   .phase {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeUp 0.6s ease-out forwards;
   }
-
   .phase:nth-child(1) { animation-delay: 0.1s; }
   .phase:nth-child(2) { animation-delay: 0.15s; }
   .phase:nth-child(3) { animation-delay: 0.2s; }
@@ -434,23 +415,26 @@
     }
   }
 
-  /* ===== RESPONSIVE ===== */
+  /* RESPONSIVE */
   @media (max-width: 768px) {
     .container { padding: 0 20px; }
-
-    .top-bar {
-      padding: 20px 0;
-      font-size: 10px;
-    }
+    .top-bar { padding: 20px 0; font-size: 10px; }
     .top-bar .meta { display: none; }
 
-    .hero { padding: 56px 0 40px; }
-
-    h1.title { font-size: 40px; line-height: 1.02; }
-
-    .pillars {
+    .hero {
+      padding: 40px 0 40px;
       grid-template-columns: 1fr;
+      gap: 28px;
     }
+    .hero-photo {
+      width: 120px;
+      height: 120px;
+      order: -1;
+      margin-top: 0;
+    }
+    h1.title { font-size: 36px; line-height: 1.02; }
+
+    .pillars { grid-template-columns: 1fr; }
     .pillar {
       padding: 24px 0;
       border-right: none;
@@ -461,29 +445,21 @@
 
     .map-intro {
       padding: 64px 0 32px;
-      margin-top: 64px;
+      margin-top: 48px;
     }
-
     .phase {
       grid-template-columns: 1fr;
       gap: 20px;
       padding: 36px 0;
     }
-
     .phase-number {
       font-size: 64px;
       display: flex;
       align-items: baseline;
       gap: 16px;
     }
-    .phase-number .of {
-      margin-top: 0;
-    }
-
-    .phase-meta {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
+    .phase-number .of { margin-top: 0; }
+    .phase-meta { grid-template-columns: 1fr; gap: 20px; }
 
     .promise { padding: 64px 0; }
     .promise blockquote { font-size: 24px; }
@@ -496,17 +472,12 @@
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    .phase {
-      gap: 32px;
-    }
+    .hero-photo { width: 140px; height: 140px; }
+    .phase { gap: 32px; }
   }
 
-  /* Print styles for PDF export */
   @media print {
-    body {
-      background: white;
-      color: #1a1a1a;
-    }
+    body { background: white; color: #1a1a1a; }
     body::before { display: none; }
     .phase { page-break-inside: avoid; }
     .cta { display: none; }
@@ -517,22 +488,25 @@
 
 <div class="container">
 
-  <!-- TOP BAR -->
   <div class="top-bar">
     <div class="brand">Sebastián Olmedo · Consultor Notion</div>
     <div class="meta">Edición 2026 / 01</div>
   </div>
 
-  <!-- HERO -->
   <section class="hero">
-    <div class="eyebrow">El mapa de tu consultoría</div>
-    <h1 class="title">
-      Que tu equipo deje de perder <em>información, tiempo</em> y <em>foco</em>.
-    </h1>
-    <p class="hero-lede">
-      Diseñamos juntos un sistema Notion con agentes IA nativos que tu equipo sí usa. Sin Make. Sin Zapier. Sin diez herramientas que nadie abre.
-    </p>
+    <div class="hero-content">
+      <div class="eyebrow">El mapa de mi consultoría</div>
+      <h1 class="title">
+        Que tu equipo deje de perder <em>información, tiempo</em> y <em>foco</em>.
+      </h1>
+      <p class="hero-lede">
+        Diseño contigo un sistema Notion con agentes IA nativos que tu equipo sí usa. Sin Make. Sin Zapier. Sin diez herramientas que nadie abre.
+      </p>
+    </div>
+    <img src="photo-circle.png" alt="Sebastián Olmedo, consultor IT Notion" class="hero-photo">
+  </section>
 
+  <div class="pillars-wrap">
     <div class="pillars">
       <div class="pillar">
         <div class="num">i.</div>
@@ -550,30 +524,27 @@
         <div class="desc">Menos ruido, menos reuniones, menos notificaciones inútiles.</div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- MAP INTRO -->
   <section class="map-intro">
     <div class="section-label">El recorrido</div>
     <h2>Siete fases. Una conversación constante. Cero sorpresas.</h2>
     <p>
-      No vendemos software. Acompañamos a tu equipo desde entender el problema real hasta usar el sistema con autonomía. Cada fase tiene un propósito, un entregable y una conversación que mantenemos contigo.
+      No vendo software. Acompaño a tu equipo desde entender el problema real hasta usar el sistema con autonomía. Cada fase tiene un propósito, un entregable y una conversación que mantengo contigo.
     </p>
   </section>
 
-  <!-- PHASES -->
   <section class="phases">
 
-    <!-- FASE 1 -->
     <div class="phase">
       <div class="phase-number">
         01
         <span class="of">Punto de partida</span>
       </div>
       <div class="phase-content">
-        <h3>Entendemos qué <em>os duele</em> de verdad.</h3>
+        <h3>Entiendo qué <em>os duele</em> de verdad.</h3>
         <p class="what">
-          Antes de tocar Notion, hablamos. Escuchamos al equipo, no solo al CEO. Identificamos dónde se pierde la información, qué reuniones sobran y qué procesos viven en cabezas concretas.
+          Antes de tocar Notion, hablamos. Escucho al equipo, no solo al CEO. Identifico dónde se pierde la información, qué reuniones sobran y qué procesos viven en cabezas concretas.
         </p>
         <dl class="phase-meta">
           <div>
@@ -588,16 +559,15 @@
       </div>
     </div>
 
-    <!-- FASE 2 -->
     <div class="phase">
       <div class="phase-number">
         02
         <span class="of">Estructura</span>
       </div>
       <div class="phase-content">
-        <h3>Diseñamos la <em>arquitectura</em> antes de construir nada.</h3>
+        <h3>Diseño la <em>arquitectura</em> antes de construir nada.</h3>
         <p class="what">
-          Definimos cómo se organiza la información para que tu equipo la encuentre sin pensar. Trabajamos con vosotros, no para vosotros: lo que se decide aquí refleja cómo trabajáis de verdad.
+          Defino cómo se organiza la información para que tu equipo la encuentre sin pensar. Trabajo con vosotros, no para vosotros: lo que se decide aquí refleja cómo trabajáis de verdad.
         </p>
         <dl class="phase-meta">
           <div>
@@ -612,16 +582,15 @@
       </div>
     </div>
 
-    <!-- FASE 3 -->
     <div class="phase">
       <div class="phase-number">
         03
         <span class="of">Diseño</span>
       </div>
       <div class="phase-content">
-        <h3>Aterrizamos cada flujo en <em>algo concreto</em>.</h3>
+        <h3>Aterrizo cada flujo en <em>algo concreto</em>.</h3>
         <p class="what">
-          Cogemos los procesos clave y los convertimos en flujos navegables: quién entra, qué hace, qué ve, qué decide. Aquí aparecen los agentes IA, no como adorno sino donde realmente quitan trabajo.
+          Cojo los procesos clave y los convierto en flujos navegables: quién entra, qué hace, qué ve, qué decide. Aquí aparecen los agentes IA, no como adorno sino donde realmente quitan trabajo.
         </p>
         <dl class="phase-meta">
           <div>
@@ -636,16 +605,15 @@
       </div>
     </div>
 
-    <!-- FASE 4 -->
     <div class="phase">
       <div class="phase-number">
         04
         <span class="of">Construcción</span>
       </div>
       <div class="phase-content">
-        <h3>Construimos la <em>versión mínima útil</em>.</h3>
+        <h3>Construyo la <em>versión mínima útil</em>.</h3>
         <p class="what">
-          Montamos lo acordado. Sin extras, sin "por si acaso", sin que el sistema parezca un cohete que nadie sabe pilotar. Lo importante: que esté terminado, probado y listo para el equipo.
+          Monto lo acordado. Sin extras, sin "por si acaso", sin que el sistema parezca un cohete que nadie sabe pilotar. Lo importante: que esté terminado, probado y listo para el equipo.
         </p>
         <dl class="phase-meta">
           <div>
@@ -660,7 +628,6 @@
       </div>
     </div>
 
-    <!-- FASE 5 -->
     <div class="phase">
       <div class="phase-number">
         05
@@ -669,7 +636,7 @@
       <div class="phase-content">
         <h3>Lo prueba el equipo <em>en su día real</em>.</h3>
         <p class="what">
-          Empieza un grupo pequeño. Observamos cómo lo usan de verdad, qué fricción aparece, qué falta. Ajustamos en caliente. No es prueba de laboratorio: es uso real con clientes y proyectos reales.
+          Empieza un grupo pequeño. Observo cómo lo usan de verdad, qué fricción aparece, qué falta. Ajustamos en caliente. No es prueba de laboratorio: es uso real con clientes y proyectos reales.
         </p>
         <dl class="phase-meta">
           <div>
@@ -684,7 +651,6 @@
       </div>
     </div>
 
-    <!-- FASE 6 -->
     <div class="phase">
       <div class="phase-number">
         06
@@ -693,7 +659,7 @@
       <div class="phase-content">
         <h3>El equipo lo <em>hace suyo</em>.</h3>
         <p class="what">
-          Aquí está la diferencia. Formación corta, soporte cercano, referentes internos. No "te dejo el manual y suerte". El objetivo es que cuando nos vayamos, el sistema siga vivo y creciendo.
+          Aquí está la diferencia. Formación corta, soporte cercano, referentes internos. No "te dejo el manual y suerte". Mi objetivo es que cuando me vaya, el sistema siga vivo y creciendo.
         </p>
         <dl class="phase-meta">
           <div>
@@ -708,7 +674,6 @@
       </div>
     </div>
 
-    <!-- FASE 7 -->
     <div class="phase">
       <div class="phase-number">
         07
@@ -717,7 +682,7 @@
       <div class="phase-content">
         <h3>El sistema <em>crece</em> con vosotros.</h3>
         <p class="what">
-          Cada trimestre revisamos juntos qué funciona, qué sobra, qué pedía el equipo y aún no estaba. No te dejamos solo con un workspace que se va degradando: lo mantenemos vivo cuando lo necesites.
+          Cada trimestre revisamos juntos qué funciona, qué sobra, qué pedía el equipo y aún no estaba. No te dejo solo con un workspace que se va degradando: lo mantengo vivo cuando lo necesites.
         </p>
         <dl class="phase-meta">
           <div>
@@ -734,11 +699,10 @@
 
   </section>
 
-  <!-- PROMISE -->
   <section class="promise">
     <div class="quote-mark">"</div>
     <blockquote>
-      Sistemas Notion que el equipo <em>sí usa</em>.
+      Diseño sistemas Notion que el equipo <em>sí usa</em>.
     </blockquote>
     <a href="mailto:sebastianolmedosalinas@gmail.com?subject=Quiero%20hablar%20de%20mi%20equipo" class="cta">
       Hablemos de tu equipo
@@ -747,7 +711,6 @@
     <div class="cta-sub">Conversación inicial sin coste · 30 minutos</div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="sig">
       <strong>Sebastián Olmedo Salinas</strong> · Consultor IT Notion · Alicante
