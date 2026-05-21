@@ -267,16 +267,15 @@
 
   .phase-number {
     font-family: 'Fraunces', serif;
-    font-style: italic;
     font-weight: 300;
-    font-size: clamp(64px, 8vw, 112px);
-    line-height: 0.9;
+    font-size: clamp(72px, 9vw, 128px);
+    line-height: 0.85;
     color: var(--amber);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
+    font-feature-settings: 'lnum';
   }
   .phase-number .of {
     display: block;
-    font-style: normal;
     font-size: 12px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -322,6 +321,13 @@
     margin-bottom: 8px;
     font-weight: 500;
   }
+  .phase-meta .commitment-block dt {
+    color: var(--amber);
+    font-weight: 600;
+  }
+  .phase-meta .commitment-block dd {
+    color: var(--ink);
+  }
   .phase-meta dd {
     font-size: 15px;
     line-height: 1.5;
@@ -330,6 +336,9 @@
   .phase-meta dd strong {
     color: var(--ink);
     font-weight: 500;
+  }
+  .phase-meta .commitment-block dd strong {
+    color: var(--amber-soft);
   }
 
   /* PROMISE / CTA */
@@ -571,17 +580,17 @@
   <div class="pillars-wrap">
     <div class="pillars">
       <div class="pillar">
-        <div class="num">i.</div>
+        <div class="num">1.</div>
         <div class="label" data-i18n="pillar1_label">Información que no se pierde</div>
         <div class="desc" data-i18n="pillar1_desc">Lo importante deja de vivir en chats, hilos sueltos o cabezas concretas.</div>
       </div>
       <div class="pillar">
-        <div class="num">ii.</div>
+        <div class="num">2.</div>
         <div class="label" data-i18n="pillar2_label">Tiempo que no se gasta buscando</div>
         <div class="desc" data-i18n="pillar2_desc">Cada cosa tiene su sitio y todos saben dónde mirar.</div>
       </div>
       <div class="pillar">
-        <div class="num">iii.</div>
+        <div class="num">3.</div>
         <div class="label" data-i18n="pillar3_label">Foco que no se dispersa</div>
         <div class="desc" data-i18n="pillar3_desc">Menos ruido, menos reuniones, menos notificaciones inútiles.</div>
       </div>
@@ -600,7 +609,7 @@
 
     <div class="phase">
       <div class="phase-number">
-        i
+        01
         <span class="of" data-i18n="phase1_label">Punto de partida</span>
       </div>
       <div class="phase-content">
@@ -613,7 +622,7 @@
             <dt data-i18n="result_label">Resultado</dt>
             <dd data-i18n="phase1_result">Diagnóstico claro de cuellos de botella reales</dd>
           </div>
-          <div>
+          <div class="commitment-block">
             <dt data-i18n="commitment_label">Tu compromiso</dt>
             <dd data-i18n="phase1_commit" data-i18n-html="true"><strong>1–2 sesiones</strong> con quienes conocen la operación</dd>
           </div>
@@ -623,7 +632,7 @@
 
     <div class="phase">
       <div class="phase-number">
-        ii
+        02
         <span class="of" data-i18n="phase2_label">Estructura</span>
       </div>
       <div class="phase-content">
@@ -636,7 +645,7 @@
             <dt data-i18n="result_label">Resultado</dt>
             <dd data-i18n="phase2_result">Mapa visual del sistema antes de invertir tiempo</dd>
           </div>
-          <div>
+          <div class="commitment-block">
             <dt data-i18n="commitment_label">Tu compromiso</dt>
             <dd data-i18n="phase2_commit" data-i18n-html="true">Validar la estructura con <strong>las personas clave del equipo</strong></dd>
           </div>
@@ -646,7 +655,7 @@
 
     <div class="phase">
       <div class="phase-number">
-        iii
+        03
         <span class="of" data-i18n="phase3_label">Diseño</span>
       </div>
       <div class="phase-content">
@@ -659,7 +668,7 @@
             <dt data-i18n="result_label">Resultado</dt>
             <dd data-i18n="phase3_result">Flujos visualizados y validados antes de construir</dd>
           </div>
-          <div>
+          <div class="commitment-block">
             <dt data-i18n="commitment_label">Tu compromiso</dt>
             <dd data-i18n="phase3_commit" data-i18n-html="true"><strong>Una decisión clara</strong> sobre qué entra en la primera versión</dd>
           </div>
@@ -669,7 +678,7 @@
 
     <div class="phase">
       <div class="phase-number">
-        iv
+        04
         <span class="of" data-i18n="phase4_label">Construcción</span>
       </div>
       <div class="phase-content">
@@ -682,7 +691,7 @@
             <dt data-i18n="result_label">Resultado</dt>
             <dd data-i18n="phase4_result">Workspace funcional con agentes IA operativos</dd>
           </div>
-          <div>
+          <div class="commitment-block">
             <dt data-i18n="commitment_label">Tu compromiso</dt>
             <dd data-i18n="phase4_commit" data-i18n-html="true">Una <strong>revisión rápida</strong> antes del piloto</dd>
           </div>
@@ -692,7 +701,7 @@
 
     <div class="phase">
       <div class="phase-number">
-        v
+        05
         <span class="of" data-i18n="phase5_label">Piloto</span>
       </div>
       <div class="phase-content">
@@ -705,7 +714,7 @@
             <dt data-i18n="result_label">Resultado</dt>
             <dd data-i18n="phase5_result">Sistema validado por quienes lo van a usar</dd>
           </div>
-          <div>
+          <div class="commitment-block">
             <dt data-i18n="commitment_label">Tu compromiso</dt>
             <dd data-i18n="phase5_commit" data-i18n-html="true">Sesiones quincenales <strong>de 30 minutos</strong></dd>
           </div>
@@ -715,7 +724,7 @@
 
     <div class="phase">
       <div class="phase-number">
-        vi
+        06
         <span class="of" data-i18n="phase6_label">Adopción</span>
       </div>
       <div class="phase-content">
@@ -728,7 +737,7 @@
             <dt data-i18n="result_label">Resultado</dt>
             <dd data-i18n="phase6_result">Equipo autónomo, sin dependencia del consultor</dd>
           </div>
-          <div>
+          <div class="commitment-block">
             <dt data-i18n="commitment_label">Tu compromiso</dt>
             <dd data-i18n="phase6_commit" data-i18n-html="true">Designar <strong>1 persona referente</strong> en el equipo</dd>
           </div>
@@ -738,7 +747,7 @@
 
     <div class="phase">
       <div class="phase-number">
-        vii
+        07
         <span class="of" data-i18n="phase7_label">Evolución</span>
       </div>
       <div class="phase-content">
@@ -751,7 +760,7 @@
             <dt data-i18n="result_label">Resultado</dt>
             <dd data-i18n="phase7_result">Sistema que mejora en lugar de envejecer</dd>
           </div>
-          <div>
+          <div class="commitment-block">
             <dt data-i18n="commitment_label">Tu compromiso</dt>
             <dd data-i18n="phase7_commit" data-i18n-html="true">Una revisión <strong>cada 90 días</strong> (opcional)</dd>
           </div>
@@ -769,9 +778,14 @@
 
     <div class="cta-group">
       <a href="https://calendar.notion.so/meet/sebastianolmedosalinas/mdne2mbu" target="_blank" rel="noopener" class="cta-primary">
-        <!-- Notion icon SVG (oficial style) -->
+        <!-- Icono calendario sólido (más claro que logo Notion sobre fondo ámbar) -->
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933z" fill="currentColor"/>
+          <rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M3 9h18" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="8" cy="14" r="1.2" fill="currentColor"/>
+          <circle cx="12" cy="14" r="1.2" fill="currentColor"/>
+          <circle cx="16" cy="14" r="1.2" fill="currentColor"/>
         </svg>
         <span data-i18n="cta_primary">Agendar conversación</span>
       </a>
