@@ -9,8 +9,15 @@
 <meta property="og:title" content="Mapa de Consultoría Notion · Sebastián Olmedo" />
 <meta property="og:description" content="Notion + IA: que tu equipo deje de perder información, tiempo y foco." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="photo-circle.png" />
+<meta property="og:url" content="https://mapa-consultoria-notion.vercel.app/" />
+<meta property="og:image" content="https://mapa-consultoria-notion.vercel.app/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Sebastián Olmedo Salinas · Consultor IT Notion + IA · Sistemas Notion que el equipo no abandona" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://mapa-consultoria-notion.vercel.app/og.png" />
+<meta name="twitter:title" content="Mapa de Consultoría Notion · Sebastián Olmedo" />
+<meta name="twitter:description" content="Sistemas Notion + IA que el equipo no abandona. Para agencias, consultoras y estudios de servicios profesionales." />
 <link rel="icon" type="image/png" href="photo-circle.png" />
 
 <!-- ============ SCHEMA.ORG JSON-LD ============ -->
@@ -189,6 +196,30 @@
     box-shadow: 0 0 0 3px rgba(240, 120, 32, 0.18);
   }
 
+  /* ============ NAV ============ */
+  .top-nav {
+    display: flex; align-items: center; gap: 28px;
+    flex: 1;
+    justify-content: center;
+  }
+  .top-nav a {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 11.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-decoration: none;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+    transition: color .2s ease, border-color .2s ease;
+  }
+  .top-nav a:hover { color: var(--brand); border-bottom-color: var(--brand); }
+  .top-nav a.active { color: var(--ink); }
+  @media (max-width: 768px) {
+    .top-nav { display: none; }
+  }
+
   .lang-switcher {
     display: flex;
     gap: 4px;
@@ -336,6 +367,21 @@
     flex-shrink: 0;
     filter: invert(1) brightness(0.95);
   }
+  .hero-meta .m-link {
+    color: var(--brand);
+    text-decoration: none;
+    cursor: pointer;
+    border-color: rgba(240, 120, 32, 0.35);
+    background: rgba(240, 120, 32, 0.06);
+  }
+  .hero-meta .m-link:hover {
+    color: var(--brand-soft);
+    border-color: var(--brand);
+    background: rgba(240, 120, 32, 0.10);
+    transform: translateY(-1px);
+  }
+  .hero-meta .m-link strong { color: var(--brand); font-weight: 700; }
+  .hero-meta .m-link:hover strong { color: var(--brand-soft); }
 
   /* ============ PILLARS ============ */
   .pillars-wrap { padding-bottom: 32px; }
@@ -1340,6 +1386,167 @@
     filter: grayscale(0.1);
   }
 
+  /* ============ AI ACT CALLOUT ============ */
+  .aiact-callout {
+    padding: 96px 0;
+    border-top: 1px solid var(--rule);
+    background: rgba(245,241,234,0.015);
+  }
+  .aiact-head { margin-bottom: 48px; max-width: 60ch; }
+  .aiact-head h2 {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 22px;
+    text-wrap: balance;
+  }
+  .aiact-head h2 em { font-style: italic; font-weight: 400; color: var(--brand-soft); }
+  .aiact-head .stamp {
+    margin-top: 18px;
+    padding: 14px 18px;
+    background: var(--brand);
+    color: var(--bg);
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: -0.005em;
+    display: inline-block;
+    border-radius: 2px;
+  }
+  .aiact-head .stamp em { font-style: normal; }
+  .aiact-head p {
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 56ch;
+    margin-top: 22px;
+  }
+  .aiact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 14px;
+    margin-top: 8px;
+  }
+  @media (max-width: 880px) { .aiact-grid { grid-template-columns: 1fr; } }
+  .aiact-card {
+    background: var(--bg-2);
+    border: 1px solid var(--rule-strong);
+    border-radius: 8px;
+    padding: 36px 32px 32px;
+    text-decoration: none;
+    color: inherit;
+    display: flex; flex-direction: column;
+    transition: border-color .2s ease, transform .2s ease, background .2s ease;
+  }
+  .aiact-card:hover {
+    border-color: var(--brand);
+    transform: translateY(-2px);
+    background: rgba(240,120,32,0.03);
+  }
+  .aiact-card .label {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin-bottom: 18px;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .aiact-card .label::before { content: ""; width: 22px; height: 1px; background: var(--brand); }
+  .aiact-card h3 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(20px, 2.4vw, 26px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+    color: var(--ink);
+    text-wrap: balance;
+    transition: color .2s;
+  }
+  .aiact-card:hover h3 { color: var(--brand-soft); }
+  .aiact-card p {
+    font-family: var(--body);
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-muted);
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .aiact-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+  .aiact-card ul li {
+    font-family: var(--body);
+    font-size: 14px;
+    color: var(--ink);
+    padding: 8px 0 8px 18px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    line-height: 1.45;
+  }
+  .aiact-card ul li:last-child { border-bottom: none; }
+  .aiact-card ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--brand);
+    font-weight: 600;
+  }
+  .aiact-card .arrow {
+    margin-top: auto;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brand);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .aiact-card.case .featured-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-bottom: 14px;
+    font-family: var(--display);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: rgba(240,120,32,0.12);
+    color: var(--brand);
+    border-radius: 999px;
+  }
+  .aiact-card.case .meta {
+    font-family: var(--display);
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  .aiact-card.case .status {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 14px;
+    font-family: var(--display);
+    font-size: 11px;
+    color: var(--brand);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .aiact-card.case .status .pulse {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--brand);
+    box-shadow: 0 0 0 0 rgba(240,120,32,0.6);
+    animation: pulse 2s infinite;
+  }
+
   /* ============ CTA STRIP ============ */
   .cta-strip {
     padding: 64px 0;
@@ -1872,6 +2079,78 @@
   }
   footer .sig .sep { color: var(--ink-faint); margin: 0 8px; }
 
+  /* ============ SOUNDTRACK · Spotify embed ============ */
+  .soundtrack {
+    padding: 64px 0 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .soundtrack-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .soundtrack-copy .section-label {
+    font-family: var(--display);
+    font-size: 10.5px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .soundtrack-copy .section-label::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--brand);
+    box-shadow: 0 0 0 4px rgba(240, 120, 32, 0.12);
+  }
+  .soundtrack-copy h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(22px, 2.2vw, 28px);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 14px;
+    max-width: 22ch;
+  }
+  .soundtrack-copy h3 em {
+    font-style: normal;
+    color: var(--brand-soft);
+  }
+  .soundtrack-copy p {
+    font-family: var(--body);
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 38ch;
+  }
+  .soundtrack-embed {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--rule-strong);
+    background: var(--bg-2);
+    box-shadow: 0 1px 0 rgba(245,241,234,0.02) inset;
+  }
+  .soundtrack-embed iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+  @media (max-width: 768px) {
+    .soundtrack { padding: 48px 0 24px; }
+    .soundtrack-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+
   /* ============ ANIMATIONS ============ */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -1970,6 +2249,11 @@
       <span class="dot" aria-hidden="true"></span>
       <span data-i18n="brand">Sebastián Olmedo · Consultor Notion</span>
     </div>
+    <nav class="top-nav" aria-label="Principal">
+      <a href="index.html" class="active" data-i18n="nav_home">Inicio</a>
+      <a href="administraciones-publicas.html" data-i18n="nav_admin">AI Act · Administraciones</a>
+      <a href="aviso-legal.html" data-i18n="nav_legal">Aviso legal</a>
+    </nav>
     <div class="lang-switcher" role="group" aria-label="Language">
       <button data-lang="es" class="active" aria-label="Español">ES</button>
       <span class="sep">/</span>
@@ -2000,9 +2284,10 @@
           <img src="assets/notion-logo.png" alt="Notion" />
           <span data-i18n="hero_meta1" data-i18n-html="true">Consultor <strong>certificado en Notion</strong></span>
         </div>
-        <div class="m" data-i18n="hero_meta2" data-i18n-html="true">Metodología propia · <strong>9 fases</strong></div>
+        <div class="m" data-i18n="hero_meta2" data-i18n-html="true">Metodología propia · <strong>7 fases</strong></div>
         <div class="m" data-i18n="hero_meta3" data-i18n-html="true">Llave en mano · <strong>2 sem a 3 meses</strong></div>
         <div class="m" data-i18n="hero_meta4" data-i18n-html="true">Remoto · <strong>España &amp; LATAM</strong></div>
+        <a href="administraciones-publicas.html" class="m m-link" data-i18n="hero_meta5" data-i18n-html="true">También para <strong>administraciones · AI Act</strong> →</a>
       </div>
     </div>
     <div class="hero-photo-frame">
@@ -2048,7 +2333,7 @@
     <div class="fit-head">
       <div class="section-label" data-i18n="fit_label">Para quién trabajo</div>
       <h2 data-i18n="fit_title" data-i18n-html="true">No vendo para <em>todo el mundo</em>. Eso es lo que me permite hacerlo bien.</h2>
-      <p data-i18n="fit_desc">Mejor te lo digo claro antes de que reservemos una llamada: hay equipos con los que encajo y otros con los que no. Si estás en el lado izquierdo, hablemos. Si estás en el derecho, te ahorro a ti y a mí media hora.</p>
+      <p data-i18n="fit_desc">Mejor te lo digo claro antes de que reservemos una llamada: hay equipos con los que encajo y otros con los que no. Si estás en el lado verde, hablemos. Si estás en el rojo, te ahorro a ti y a mí media hora.</p>
     </div>
 
     <div class="fit-grid">
@@ -2531,7 +2816,6 @@
     <div class="clients-label" data-i18n="clients_label">Han confiado en mí</div>
     <div class="clients-row">
       <div class="client-name">Ayuntamiento de Alicante<span class="sub" data-i18n="client1_sub">2020 · Bienestar Social</span></div>
-      <div class="client-name">Academia Área Formación<span class="sub" data-i18n="client2_sub">Espacio de trabajo Notion a medida</span></div>
       <div class="client-name">Volcanic Internet<span class="sub" data-i18n="client3_sub">Partner Notion · Asana · Miro · Pipedrive</span></div>
       <div class="client-name" data-i18n="client4_name" data-i18n-html="true">+ Autónomos y freelancers<span class="sub" data-i18n="client4_sub">B2B services</span></div>
     </div>
@@ -2662,6 +2946,30 @@
     </div>
   </section>
 
+  <!-- ============ SOUNDTRACK · personal touch (pre-footer) ============ -->
+  <section class="soundtrack" aria-labelledby="soundtrack-title">
+    <div class="soundtrack-grid">
+      <div class="soundtrack-copy">
+        <div class="section-label" data-i18n="soundtrack_label">Banda sonora</div>
+        <h3 id="soundtrack-title" data-i18n="soundtrack_title" data-i18n-html="true">Lo que <em>suena</em> mientras diseño.</h3>
+        <p data-i18n="soundtrack_desc">La playlist que pongo cuando entro en modo construir Notion. Dale al play si te apetece acompañarme.</p>
+      </div>
+      <div class="soundtrack-embed">
+        <iframe
+          data-testid="embed-iframe"
+          src="https://open.spotify.com/embed/playlist/16mGUijOtOs7q4pAgyImj5?utm_source=generator"
+          width="100%"
+          height="152"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          title="Playlist de Sebastián Olmedo en Spotify">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="sig">
       <strong>Sebastián Olmedo Salinas</strong>
@@ -2673,6 +2981,7 @@
       <span data-i18n="footer_loc">Alicante, España · LATAM</span>
     </div>
     <div style="display:flex;gap:18px;justify-content:center;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;margin-top:16px;">
+      <a href="administraciones-publicas.html" style="color:var(--ink-faint);text-decoration:none;" data-i18n="footer_admin">AI Act + Administraciones</a>
       <a href="aviso-legal.html" style="color:var(--ink-faint);text-decoration:none;" data-i18n="footer_legal">Aviso legal</a>
     </div>
   </footer>
@@ -2688,7 +2997,7 @@
       certs_label: "Certificado oficial por Notion",
       fit_label: "Para quién trabajo",
       fit_title: 'No vendo para <em>todo el mundo</em>. Eso es lo que me permite hacerlo bien.',
-      fit_desc: "Mejor te lo digo claro antes de que reservemos una llamada: hay equipos con los que encajo y otros con los que no. Si estás en el lado izquierdo, hablemos. Si estás en el derecho, te ahorro a ti y a mí media hora.",
+      fit_desc: "Mejor te lo digo claro antes de que reservemos una llamada: hay equipos con los que encajo y otros con los que no. Si estás en el lado verde, hablemos. Si estás en el rojo, te ahorro a ti y a mí media hora.",
       fit_yes_title: "Sí encajamos si…",
       fit_no_title: "No encajamos si…",
       fit_yes1: 'Eres una <strong>agencia, consultora o estudio</strong> de servicios profesionales (5–50 personas).',
@@ -2728,6 +3037,9 @@
       calendar_desc: "30 minutos. Sin coste. Sin compromiso. Reserva directamente en mi calendario de Notion.",
       calendar_fallback: '¿No se carga el calendario? <a href="https://calendar.notion.so/meet/sebastianolmedosalinas/mdne2mbu" target="_blank" rel="noopener noreferrer">Ábrelo en una nueva ventana →</a>',
       about_label: "Sobre mí",
+      soundtrack_label: "Banda sonora",
+      soundtrack_title: 'Lo que <em>suena</em> mientras diseño.',
+      soundtrack_desc: "La playlist que pongo cuando entro en modo construir Notion. Dale al play si te apetece acompañarme.",
       about_title: 'Llevo más de 5 años montando sistemas <em>Notion</em> que el equipo hace suyos.',
       about_p1: 'Mi camino con Notion empezó en <strong>2020, durante el confinamiento</strong>. Diseñé para el <strong>Ayuntamiento de Alicante</strong> la programación anual de más de <strong>1.000 socios</strong> de los centros de mayores de la Concejalía de Bienestar Social, con una base de datos de <strong>+800 ejercicios</strong> detallados al milímetro — fotos, vídeos y fichas paso a paso. Ahí entendí algo simple: las herramientas no resuelven nada si el equipo no las hace suyas.',
       about_p2: 'Desde entonces diseño sistemas Notion para agencias, consultoras y estudios de servicios profesionales. <strong>Certificado oficialmente por Notion</strong> con 5 acreditaciones (Certified Admin, Service Specialist, Academy Essentials/Workflows/Advanced).',
@@ -2741,9 +3053,13 @@
       meta_autonomy: "Hasta autonomía",
       meta_certs: "Certificaciones Notion",
       hero_meta1: 'Consultor <strong>certificado en Notion</strong>',
-      hero_meta2: 'Metodología propia · <strong>9 fases</strong>',
+      hero_meta2: 'Metodología propia · <strong>7 fases</strong>',
       hero_meta3: 'Llave en mano · <strong>2 sem a 3 meses</strong>',
       hero_meta4: 'Remoto · <strong>España &amp; LATAM</strong>',
+      hero_meta5: 'También para <strong>administraciones · AI Act</strong> →',
+      nav_home: "Inicio",
+      nav_admin: "AI Act · Administraciones",
+      nav_legal: "Aviso legal",
       pillar1_label: "Información que no se pierde",
       pillar1_desc: "Lo importante deja de vivir en chats, hilos sueltos o cabezas concretas.",
       pillar2_label: "Tiempo que no se gasta buscando",
@@ -2872,7 +3188,24 @@
       cta_sub: "Sin coste · 30 minutos",
       cta_email: "Email",
       footer_role: "Consultor IT Notion",
-      footer_loc: "Alicante, España · LATAM"
+      footer_loc: "Alicante, España · LATAM",
+      aiact_label: "Otra línea de servicio",
+      aiact_title: 'AI Act + Formación Art. 4. Para equipos que <em>ya usan IA</em>.',
+      aiact_desc: "El 2 de agosto de 2026 entra en vigor el Artículo 4 del Reglamento Europeo de IA. Cualquier organización —administración pública, empresa privada o asociación— cuyo personal use IA en su trabajo está obligada a garantizar su alfabetización en IA.",
+      aiact_stamp: 'No es una recomendación. Es <em>reglamento europeo</em>. Y empieza este verano.',
+      aiact_card1_label: "Servicio · Tres vías concretas",
+      aiact_card1_title: "Diagnóstico, formación y divulgación AI Act.",
+      aiact_card1_desc: "Tres servicios cerrados —diagnóstico operativo de preparación, formación Art. 4 (8–20 h, bonificable por FUNDAE en sector privado) y ciclos divulgativos para ciudadanía y asociaciones— adaptables a tu organización.",
+      aiact_card1_li1: "Administraciones, agencias y pymes",
+      aiact_card1_li2: "Personal técnico y no técnico",
+      aiact_card1_li3: "Sesión diagnóstica + plan accionable",
+      aiact_card1_arrow: "Ver los 3 servicios →",
+      aiact_card2_tag: "Caso destacado",
+      aiact_card2_title: "Aula Abierta Alicante.",
+      aiact_card2_meta: "3 conferencias · oct–2026<br>Concejalía de Cultura · Ayto. de Alicante",
+      aiact_card2_desc: "Ciclo divulgativo IA + Notion diseñado para ciudadanía inquieta y asociaciones culturales y vecinales. Alineado con el Art. 4 del AI Act.",
+      aiact_card2_status: '<span class="pulse" aria-hidden="true"></span>Propuesta presentada',
+      aiact_card2_arrow: "Leer el caso →"
     },
     en: {
       brand: "Sebastián Olmedo · Notion Consultant",
@@ -2881,7 +3214,7 @@
       certs_label: "Officially certified by Notion",
       fit_label: "Who I work with",
       fit_title: 'I don’t sell to <em>everyone</em>. That’s what lets me do it well.',
-      fit_desc: "Better I tell you straight before we book a call: there are teams I fit well with, and others I don’t. If you’re on the left side, let’s talk. If you’re on the right, I save us both half an hour.",
+      fit_desc: "Better I tell you straight before we book a call: there are teams I fit well with, and others I don’t. If you’re on the green side, let’s talk. If you’re on the red, I save us both half an hour.",
       fit_yes_title: "We’re a fit if…",
       fit_no_title: "We’re not a fit if…",
       fit_yes1: 'You’re an <strong>agency, consultancy or studio</strong> in professional services (5–50 people).',
@@ -2921,6 +3254,9 @@
       calendar_desc: "30 minutes. No cost. No commitment. Book directly in my Notion calendar.",
       calendar_fallback: 'Calendar not loading? <a href="https://calendar.notion.so/meet/sebastianolmedosalinas/mdne2mbu" target="_blank" rel="noopener noreferrer">Open it in a new window →</a>',
       about_label: "About me",
+      soundtrack_label: "Soundtrack",
+      soundtrack_title: 'What <em>plays</em> while I design.',
+      soundtrack_desc: "The playlist I put on when I switch to Notion-build mode. Hit play if you want to keep me company.",
       about_title: 'I’ve spent 5+ years building <em>Notion</em> systems teams actually use.',
       about_p1: 'My journey with Notion started in <strong>2020, during lockdown</strong>. I designed for the <strong>Alicante City Council</strong> the yearly programme for over <strong>1,000 members</strong> of the senior centres run by the Department of Social Welfare, with a database of <strong>800+ exercises</strong> documented down to the millimetre — photos, videos and step-by-step sheets. That’s where I learned something simple: tools don’t solve anything if the team doesn’t make them their own.',
       about_p2: 'Since then I’ve been designing Notion systems for agencies, consultancies and professional-services studios. <strong>Officially certified by Notion</strong> with 5 credentials (Certified Admin, Service Specialist, Academy Essentials/Workflows/Advanced).',
@@ -2934,9 +3270,13 @@
       meta_autonomy: "Until autonomy",
       meta_certs: "Notion Certifications",
       hero_meta1: 'Notion <strong>certified consultant</strong>',
-      hero_meta2: 'Own methodology · <strong>9 phases</strong>',
+      hero_meta2: 'Own methodology · <strong>7 phases</strong>',
       hero_meta3: 'Turnkey · <strong>2 weeks to 3 months</strong>',
       hero_meta4: 'Remote · <strong>Spain &amp; LATAM</strong>',
+      hero_meta5: 'Also for <strong>public sector · AI Act</strong> →',
+      nav_home: "Home",
+      nav_admin: "AI Act · Public sector",
+      nav_legal: "Legal notice",
       pillar1_label: "Information that doesn't get lost",
       pillar1_desc: "What matters stops living in chats, loose threads or specific people's heads.",
       pillar2_label: "Time not spent searching",
@@ -3065,7 +3405,24 @@
       cta_sub: "Free · 30 minutes",
       cta_email: "Email",
       footer_role: "Notion IT Consultant",
-      footer_loc: "Alicante, Spain · LATAM"
+      footer_loc: "Alicante, Spain · LATAM",
+      aiact_label: "Another service line",
+      aiact_title: 'AI Act + Article 4 training. For teams <em>already using AI</em>.',
+      aiact_desc: "On 2 August 2026, Article 4 of the EU AI Act comes into force. Any organisation —public administration, private company or association— whose staff use AI at work is legally required to ensure AI literacy.",
+      aiact_stamp: 'It’s not a recommendation. It’s <em>EU regulation</em>. And it starts this summer.',
+      aiact_card1_label: "Service · Three concrete paths",
+      aiact_card1_title: "Diagnosis, training and outreach for the AI Act.",
+      aiact_card1_desc: "Three closed services —preparation diagnosis, Article 4 training (8–20 h, FUNDAE-eligible for private sector) and outreach cycles for citizens and associations— adaptable to your organisation.",
+      aiact_card1_li1: "Administrations, agencies and SMEs",
+      aiact_card1_li2: "Technical and non-technical staff",
+      aiact_card1_li3: "Diagnostic session + actionable plan",
+      aiact_card1_arrow: "See the three services →",
+      aiact_card2_tag: "Featured case",
+      aiact_card2_title: "Aula Abierta Alicante.",
+      aiact_card2_meta: "3 talks · Oct–Dec 2026<br>Department of Culture · Alicante City Council",
+      aiact_card2_desc: "AI + Notion outreach cycle designed for curious citizens and cultural and community associations. Aligned with Article 4 of the AI Act.",
+      aiact_card2_status: '<span class="pulse" aria-hidden="true"></span>Proposal submitted',
+      aiact_card2_arrow: "Read the case →"
     }
   };
 

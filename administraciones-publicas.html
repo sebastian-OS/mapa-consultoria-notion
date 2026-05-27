@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Consultoría AI Act + Formación Art. 4 · Sebastián Olmedo</title>
+<meta name="description" content="Diagnóstico, formación y divulgación para cumplir el Artículo 4 del AI Act desde el 2 de agosto de 2026. Para administraciones públicas, agencias y pymes." />
+<meta name="keywords" content="AI Act, Artículo 4, alfabetización IA, formación IA, administraciones públicas, Reglamento UE 2024/1689" />
+<link rel="canonical" href="https://mapa-consultoria-notion.vercel.app/administraciones-publicas.html" />
+
+<meta property="og:title" content="Consultoría AI Act + Formación Art. 4 · Sebastián Olmedo" />
+<meta property="og:description" content="El 2 de agosto de 2026 entra en vigor el Art. 4 del AI Act. Diagnóstico, formación y divulgación para tu organización." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://mapa-consultoria-notion.vercel.app/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://mapa-consultoria-notion.vercel.app/og.png" />
+<link rel="icon" type="image/png" href="photo-circle.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Consultoría AI Act + Formación Artículo 4",
+  "provider": {
+    "@type": "Person",
+    "name": "Sebastián Olmedo Salinas",
+    "url": "https://mapa-consultoria-notion.vercel.app/"
+  },
+  "description": "Diagnóstico operativo, formación de alfabetización en IA (Art. 4) y ciclos divulgativos para administraciones públicas, agencias y pymes.",
+  "areaServed": [{ "@type": "Country", "name": "España" }],
+  "audience": { "@type": "Audience", "audienceType": "Administraciones públicas, agencias, pymes" }
+}
+</script>
+
+<style>
+  /* ============ BRAND FONTS · local variable ============ */
+  @font-face {
+    font-family: 'Montserrat'; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Montserrat'; font-style: italic; font-weight: 100 900; font-display: swap;
+    src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url('fonts/Inter-VariableFont_opsz_wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Inter'; font-style: italic; font-weight: 100 900; font-display: swap;
+    src: url('fonts/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype');
+  }
+
+  :root {
+    --bg: #FAFAF8;
+    --bg-2: #FFFFFF;
+    --ink: #1A1A1A;
+    --ink-muted: #4A4A48;
+    --ink-faint: #8A8884;
+    --brand: #F07820;
+    --brand-soft: #FAC775;
+    --rule: rgba(26, 26, 26, 0.08);
+    --rule-strong: rgba(26, 26, 26, 0.16);
+    --display: 'Montserrat', sans-serif;
+    --body: 'Inter', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: var(--brand); color: var(--bg-2); }
+
+  a { color: inherit; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 768px) { .container { padding: 0 20px; } }
+
+  /* TOP NAV */
+  .top {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--display);
+    font-size: 11.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: 500;
+  }
+  .top a { color: var(--ink-faint); text-decoration: none; transition: color .2s; }
+  .top a:hover { color: var(--brand); }
+  .top .brand { color: var(--ink); display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .top .brand .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
+  .top .back::before { content: "← "; }
+
+  /* HERO */
+  .hero {
+    padding: 96px 0 64px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-family: var(--display);
+    font-size: 11px; letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--brand); font-weight: 700;
+    margin-bottom: 32px;
+  }
+  .eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--brand); }
+  h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(40px, 5.6vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 32px;
+    text-wrap: balance;
+    max-width: 22ch;
+  }
+  .lede {
+    font-family: var(--body);
+    font-size: clamp(17px, 1.4vw, 19px);
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 60ch;
+    margin-bottom: 16px;
+  }
+  .lede strong { color: var(--ink); font-weight: 600; }
+  .stamp {
+    margin-top: 22px;
+    padding: 14px 18px;
+    background: var(--ink);
+    color: var(--bg-2);
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 13.5px;
+    letter-spacing: -0.005em;
+    display: inline-block;
+    border-radius: 2px;
+  }
+  .stamp em {
+    font-style: normal;
+    color: var(--brand-soft);
+  }
+
+  /* SECTIONS */
+  section.block {
+    padding: 96px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section-label {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin-bottom: 18px;
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .section-label::before {
+    content: ""; width: 28px; height: 1px; background: var(--brand);
+  }
+  h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(30px, 4.2vw, 46px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    max-width: 24ch;
+    text-wrap: balance;
+  }
+  h2 em { font-style: normal; color: var(--brand); }
+  .section-intro {
+    font-family: var(--body);
+    font-size: 16px;
+    color: var(--ink-muted);
+    max-width: 56ch;
+    line-height: 1.65;
+  }
+
+  /* SERVICE CARDS */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    margin-top: 56px;
+    border: 1px solid var(--rule);
+  }
+  @media (max-width: 880px) { .services { grid-template-columns: 1fr; } }
+
+  .service {
+    background: var(--bg-2);
+    padding: 40px 32px 44px;
+    display: flex; flex-direction: column;
+    transition: background .2s ease;
+  }
+  .service:hover { background: var(--bg); }
+  .service .num {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--brand);
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+  }
+  .service h3 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.22;
+    letter-spacing: -0.01em;
+    margin-bottom: 22px;
+    color: var(--ink);
+    text-wrap: balance;
+    transition: color .2s ease;
+  }
+  .service:hover h3 { color: var(--brand); }
+  .service ul {
+    list-style: none;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .service ul li {
+    font-family: var(--body);
+    font-size: 14.5px;
+    color: var(--ink-muted);
+    line-height: 1.55;
+    padding: 9px 0 9px 18px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .service ul li:last-child { border-bottom: none; }
+  .service ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--brand);
+    font-weight: 600;
+  }
+  .service .meta-row {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .service .meta-row span {
+    font-family: var(--display);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+  }
+  .service .meta-row span b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  /* WHY ME */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 48px;
+  }
+  @media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; } }
+
+  .why-item {
+    background: var(--bg-2);
+    padding: 32px 28px;
+    display: flex; gap: 20px; align-items: flex-start;
+  }
+  .why-item .marker {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 28px;
+    color: var(--brand);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+    min-width: 36px;
+  }
+  .why-item p {
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .why-item p strong { color: var(--brand); font-weight: 600; }
+
+  /* CTA SECTION */
+  .cta-section {
+    padding: 96px 0;
+    text-align: center;
+    background: var(--ink);
+    color: var(--bg-2);
+  }
+  .cta-section h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(30px, 4vw, 44px);
+    color: var(--bg-2);
+    margin: 0 auto 18px;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+  .cta-section h2 em { color: var(--brand-soft); font-style: normal; }
+  .cta-section p {
+    font-family: var(--body);
+    font-size: 15.5px;
+    color: rgba(255,255,255,0.7);
+    margin: 0 auto 36px;
+    max-width: 50ch;
+  }
+  .cta-btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px;
+    background: var(--bg-2);
+    color: var(--ink);
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background .2s, color .2s, transform .2s;
+  }
+  .cta-btn:hover {
+    background: var(--brand);
+    color: var(--bg-2);
+    transform: translateY(-2px);
+  }
+  .cta-btn::after { content: "→"; }
+
+  /* FOOTER */
+  footer {
+    padding: 32px 0 48px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+  footer b { font-style: normal; font-weight: 600; color: var(--ink); }
+  footer .links {
+    display: flex; gap: 18px; justify-content: center;
+    margin-top: 16px; font-style: normal;
+    font-size: 10.5px; letter-spacing: 0.16em;
+    text-transform: uppercase; font-weight: 500;
+  }
+  footer .links a { color: var(--ink-faint); text-decoration: none; }
+  footer .links a:hover { color: var(--brand); }
+
+  @media print {
+    .top .back, .cta-btn { display: none; }
+    .cta-section { background: white; color: #1a1a1a; }
+    .cta-section h2, .cta-section p { color: #1a1a1a; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="top">
+    <a href="index.html" class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Sebastián Olmedo · Consultor Notion + IA</span>
+    </a>
+    <a href="index.html" class="back">Volver al mapa</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="eyebrow">Servicio · Sector público + privado</div>
+    <h1>Para administraciones, agencias y empresas que ya usan IA.</h1>
+    <p class="lede">El <strong>2 de agosto de 2026</strong> entra en vigor el <strong>Artículo 4 del Reglamento Europeo de Inteligencia Artificial (AI Act)</strong>. Cualquier organización —administración pública, empresa privada o asociación— cuyo personal use IA en su trabajo está legalmente obligada a garantizar su alfabetización en IA.</p>
+    <div class="stamp">No es una recomendación. Es <em>reglamento europeo</em>. Y empieza este verano.</div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="block">
+    <div class="section-label">Tres servicios concretos</div>
+    <h2>Diagnóstico, formación y <em>divulgación</em>.</h2>
+    <p class="section-intro">Tres servicios cerrados con alcance, entregables y plazos públicos. Adaptables al tamaño y madurez de tu organización.</p>
+
+    <div class="services">
+
+      <article class="service">
+        <div class="num">Servicio 01</div>
+        <h3>Diagnóstico operativo de preparación AI Act</h3>
+        <ul>
+          <li>Inventario del uso real de IA en tu equipo</li>
+          <li>Mapa de riesgos por departamento</li>
+          <li>Plan de acción priorizado por urgencia</li>
+        </ul>
+        <div class="meta-row">
+          <span>Entrega · <b>Informe + sesión Q&amp;A</b></span>
+          <span>Para · <b>Administraciones · agencias · pymes</b></span>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="num">Servicio 02</div>
+        <h3>Formación AI Act Art. 4 (alfabetización IA)</h3>
+        <ul>
+          <li>Capacitación obligatoria para personal que usa IA</li>
+          <li>8 h, 16 h o 20 h según necesidad del equipo</li>
+          <li>Contenido adaptado al sector y al perfil técnico</li>
+          <li>Sector privado: posibilidad de bonificar vía FUNDAE</li>
+        </ul>
+        <div class="meta-row">
+          <span>Modalidad · <b>Presencial · remoto · híbrida</b></span>
+          <span>Para · <b>Concejalías · agencias · pymes</b></span>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="num">Servicio 03</div>
+        <h3>Ciclos divulgativos para ciudadanía y asociaciones</h3>
+        <ul>
+          <li>Conferencias y talleres en aulas abiertas, semanas culturales, programas vecinales</li>
+          <li>Reduce la brecha digital de tu municipio</li>
+          <li>Capacita a asociaciones subvencionadas para redactar y justificar mejor sus proyectos</li>
+        </ul>
+        <div class="meta-row">
+          <span>Formato · <b>Conferencias · talleres</b></span>
+          <span>Para · <b>Administraciones locales con vocación divulgativa</b></span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- POR QUÉ CONMIGO -->
+  <section class="block">
+    <div class="section-label">Por qué conmigo</div>
+    <h2>Certificado, contrastado y cercano al <em>público no técnico</em>.</h2>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="marker">01</div>
+        <p><strong>5 certificaciones oficiales Notion</strong> (Essentials, Workflows, Advanced, Certified Admin, Service Specialist) vigentes hasta diciembre 2027.</p>
+      </div>
+      <div class="why-item">
+        <div class="marker">02</div>
+        <p><strong>Experiencia con el Ayuntamiento de Alicante</strong>: 4 años como monitor en Bienestar Social, trabajando con +1.000 socios de centros de mayores.</p>
+      </div>
+      <div class="why-item">
+        <div class="marker">03</div>
+        <p><strong>Especialización en alfabetización en IA</strong> para públicos no técnicos: jubilados, asociaciones, equipos administrativos, personal sin background tecnológico.</p>
+      </div>
+      <div class="why-item">
+        <div class="marker">04</div>
+        <p><strong>Metodología validada</strong> con ciudadanos, asociaciones culturales y vecinales, y equipos profesionales de servicios.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASO DESTACADO -->
+  <section class="block">
+    <div class="section-label">Caso destacado</div>
+    <h2>Aula Abierta Alicante · ciclo de conferencias <em>IA + Notion</em>.</h2>
+    <p class="section-intro">Propuesta presentada a la Concejalía de Cultura del Ayuntamiento de Alicante: 3 conferencias divulgativas (oct–dic 2026) alineadas con el Art. 4 del AI Act.</p>
+    <a href="casos/aula-abierta-alicante.html" style="display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:14px 26px;background:transparent;color:var(--ink);font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;border:1.5px solid var(--ink);border-radius:2px;text-decoration:none;transition:all .2s;">
+      Ver el caso completo →
+    </a>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>¿Tu organización tiene <em>personal que usa IA</em>?</h2>
+    <p>Solicita una propuesta a medida. Te respondo en menos de 48 h con scope, plazos y presupuesto orientativo.</p>
+    <a href="mailto:sebastianolmedosalinas@gmail.com?subject=Propuesta%20AI%20Act%20%2B%20Art.%204" class="cta-btn">Solicita una propuesta</a>
+  </section>
+
+  <footer>
+    <span><b>Sebastián Olmedo Salinas</b> · Consultor IT Notion + IA · NIF 55339904H · Alicante, España</span>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="administraciones-publicas.html">Administraciones</a>
+      <a href="casos/aula-abierta-alicante.html">Caso Aula Abierta</a>
+      <a href="aviso-legal.html">Aviso legal</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

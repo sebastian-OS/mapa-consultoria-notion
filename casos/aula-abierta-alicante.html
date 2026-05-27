@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aula Abierta Alicante · Ciclo IA + Notion · Caso de uso</title>
+<meta name="description" content="Propuesta de 3 conferencias divulgativas IA + Notion para la Concejalía de Cultura del Ayuntamiento de Alicante. Octubre–diciembre 2026. Alineada con el Art. 4 del AI Act." />
+<meta name="keywords" content="Aula Abierta Alicante, conferencias IA, Notion, AI Act, Artículo 4, divulgación, Concejalía Cultura" />
+<link rel="canonical" href="https://mapa-consultoria-notion.vercel.app/casos/aula-abierta-alicante.html" />
+
+<meta property="og:title" content="Aula Abierta Alicante · Ciclo IA + Notion · Caso de uso" />
+<meta property="og:description" content="3 conferencias divulgativas IA + Notion para la Concejalía de Cultura. Oct–dic 2026. Propuesta presentada." />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://mapa-consultoria-notion.vercel.app/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://mapa-consultoria-notion.vercel.app/og.png" />
+<link rel="icon" type="image/png" href="../photo-circle.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Ciclo de conferencias IA + Notion para el Aula Abierta del Ayuntamiento de Alicante",
+  "author": { "@type": "Person", "name": "Sebastián Olmedo Salinas" },
+  "datePublished": "2026-05-01",
+  "publisher": { "@type": "Person", "name": "Sebastián Olmedo Salinas" },
+  "description": "3 conferencias divulgativas de 60 minutos para Concejalía de Cultura de Alicante. Alineadas con Art. 4 del AI Act."
+}
+</script>
+
+<style>
+  @font-face {
+    font-family: 'Montserrat'; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Montserrat'; font-style: italic; font-weight: 100 900; font-display: swap;
+    src: url('../fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url('../fonts/Inter-VariableFont_opsz_wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Inter'; font-style: italic; font-weight: 100 900; font-display: swap;
+    src: url('../fonts/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype');
+  }
+
+  :root {
+    --bg: #FAFAF8;
+    --bg-2: #FFFFFF;
+    --ink: #1A1A1A;
+    --ink-muted: #4A4A48;
+    --ink-faint: #8A8884;
+    --brand: #F07820;
+    --brand-soft: #FAC775;
+    --rule: rgba(26, 26, 26, 0.08);
+    --rule-strong: rgba(26, 26, 26, 0.16);
+    --display: 'Montserrat', sans-serif;
+    --body: 'Inter', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--brand); color: var(--bg-2); }
+  a { color: inherit; }
+
+  .container { max-width: 920px; margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 768px) { .container { padding: 0 20px; } }
+
+  /* TOP NAV */
+  .top {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--display);
+    font-size: 11.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-muted); font-weight: 500;
+  }
+  .top a { color: var(--ink-faint); text-decoration: none; transition: color .2s; }
+  .top a:hover { color: var(--brand); }
+  .top .brand { color: var(--ink); display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .top .brand .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
+  .top .back::before { content: "← "; }
+
+  /* HERO */
+  .hero {
+    padding: 80px 0 56px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-family: var(--display);
+    font-size: 11px; letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--brand); font-weight: 700;
+    margin-bottom: 28px;
+  }
+  .eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--brand); }
+  h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(34px, 4.8vw, 56px);
+    line-height: 1.06;
+    letter-spacing: -0.022em;
+    margin-bottom: 22px;
+    text-wrap: balance;
+    max-width: 26ch;
+  }
+  h1 em { font-style: normal; color: var(--brand); }
+  .subtitle {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    display: flex; gap: 14px; flex-wrap: wrap;
+    align-items: center;
+  }
+  .subtitle .sep { color: var(--ink-faint); opacity: 0.6; }
+  .subtitle .status {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 5px 12px;
+    background: rgba(240,120,32,0.10);
+    color: var(--brand);
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+  .subtitle .status .pulse {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--brand);
+    box-shadow: 0 0 0 0 rgba(240,120,32,0.6);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(240,120,32,0.6); }
+    70% { box-shadow: 0 0 0 8px rgba(240,120,32,0); }
+    100% { box-shadow: 0 0 0 0 rgba(240,120,32,0); }
+  }
+
+  /* BLOCKS */
+  section.block { padding: 64px 0; border-bottom: 1px solid var(--rule); }
+  .section-label {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin-bottom: 22px;
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .section-label::before {
+    content: ""; width: 24px; height: 1px; background: var(--brand);
+  }
+  h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 18px;
+    max-width: 24ch;
+    text-wrap: balance;
+  }
+  h2 em { font-style: normal; color: var(--brand); }
+  .block p {
+    font-family: var(--body);
+    font-size: 16.5px;
+    line-height: 1.65;
+    color: var(--ink-muted);
+    max-width: 64ch;
+    margin-bottom: 14px;
+  }
+  .block p strong { color: var(--ink); font-weight: 600; }
+
+  /* AUDIENCES */
+  .audiences {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 28px;
+  }
+  @media (max-width: 640px) { .audiences { grid-template-columns: 1fr; } }
+  .audience {
+    background: var(--bg-2);
+    padding: 26px 28px;
+  }
+  .audience .label {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin-bottom: 8px;
+  }
+  .audience .who {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    margin-bottom: 4px;
+  }
+  .audience .desc {
+    font-family: var(--body);
+    font-size: 14px;
+    color: var(--ink-muted);
+    line-height: 1.5;
+  }
+
+  /* CONFERENCES */
+  .conferences {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .conf {
+    background: var(--bg-2);
+    padding: 36px 32px;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  @media (max-width: 768px) {
+    .conf { grid-template-columns: 1fr; gap: 14px; padding: 28px 22px; }
+  }
+  .conf .when {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brand);
+    padding-top: 6px;
+  }
+  .conf .when b {
+    display: block;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 42px;
+    color: var(--brand);
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+    margin-bottom: 8px;
+  }
+  .conf h3 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .conf .meta {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--display);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+  }
+
+  /* AI ACT BLOCK */
+  .aiact {
+    background: var(--ink);
+    color: var(--bg-2);
+    padding: 56px 0;
+  }
+  .aiact .section-label { color: var(--brand-soft); }
+  .aiact .section-label::before { background: var(--brand-soft); }
+  .aiact h2 { color: var(--bg-2); }
+  .aiact h2 em { color: var(--brand-soft); }
+  .aiact p { color: rgba(255,255,255,0.78); }
+  .aiact p strong { color: var(--bg-2); }
+  .aiact .ref {
+    margin-top: 24px;
+    font-family: var(--display);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    font-weight: 500;
+  }
+  .aiact .ref b { color: var(--brand-soft); font-weight: 700; }
+
+  /* CTA */
+  .cta-section {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .cta-section h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(24px, 3vw, 32px);
+    margin: 0 auto 16px;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+  .cta-section h2 em { color: var(--brand); font-style: normal; }
+  .cta-section p {
+    font-family: var(--body);
+    font-size: 15.5px;
+    color: var(--ink-muted);
+    margin: 0 auto 32px;
+    max-width: 50ch;
+  }
+  .cta-btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px;
+    background: var(--ink); color: var(--bg-2);
+    font-family: var(--display); font-weight: 700;
+    font-size: 13px; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background .2s, transform .2s;
+  }
+  .cta-btn:hover { background: var(--brand); transform: translateY(-2px); }
+  .cta-btn::after { content: "→"; }
+
+  /* FOOTER */
+  footer {
+    padding: 32px 0 48px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+  footer b { font-style: normal; font-weight: 600; color: var(--ink); }
+  footer .links {
+    display: flex; gap: 18px; justify-content: center;
+    margin-top: 16px; font-style: normal;
+    font-size: 10.5px; letter-spacing: 0.16em;
+    text-transform: uppercase; font-weight: 500;
+  }
+  footer .links a { color: var(--ink-faint); text-decoration: none; }
+  footer .links a:hover { color: var(--brand); }
+
+  @media print {
+    .top .back, .cta-btn { display: none; }
+    .aiact { background: white; color: #1a1a1a; }
+    .aiact h2, .aiact p { color: #1a1a1a; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="top">
+    <a href="../index.html" class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Sebastián Olmedo · Consultor Notion + IA</span>
+    </a>
+    <a href="../administraciones-publicas.html" class="back">Administraciones</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="eyebrow">Caso de uso · Sector público</div>
+    <h1>Ciclo de conferencias <em>IA + Notion</em> para el Aula Abierta del Ayuntamiento de Alicante.</h1>
+    <div class="subtitle">
+      <span>3 conferencias</span>
+      <span class="sep">·</span>
+      <span>Octubre–diciembre 2026</span>
+      <span class="sep">·</span>
+      <span>Concejalía de Cultura</span>
+      <span class="sep">·</span>
+      <span class="status"><span class="pulse" aria-hidden="true"></span>Propuesta presentada · En espera</span>
+    </div>
+  </section>
+
+  <!-- CONTEXTO -->
+  <section class="block">
+    <div class="section-label">Contexto</div>
+    <h2>Acercar la IA al <em>tejido ciudadano</em>.</h2>
+    <p>La <strong>Concejalía de Cultura del Ayuntamiento de Alicante</strong> busca acercar la IA y herramientas como Notion a su tejido ciudadano y asociativo de cara a la entrada en vigor del <strong>AI Act en agosto de 2026</strong>.</p>
+  </section>
+
+  <!-- PROPUESTA -->
+  <section class="block">
+    <div class="section-label">Propuesta</div>
+    <h2>3 conferencias de 60 minutos. Dos <em>públicos diferenciados</em>.</h2>
+    <p>Diseñadas específicamente para reducir la brecha digital y capacitar a asociaciones subvencionadas a redactar y justificar mejor sus proyectos.</p>
+
+    <div class="audiences">
+      <div class="audience">
+        <div class="label">Público 01</div>
+        <div class="who">Ciudadano inquieto</div>
+        <div class="desc">Jubilados activos, adultos y estudiantes que ya tocan IA y necesitan claves para usarla bien.</div>
+      </div>
+      <div class="audience">
+        <div class="label">Público 02</div>
+        <div class="who">Asociaciones culturales y vecinales</div>
+        <div class="desc">Colectivos con subvenciones que necesitan redactar, justificar y organizar mejor su actividad.</div>
+      </div>
+    </div>
+
+    <div class="conferences">
+
+      <div class="conf">
+        <div class="when"><b>01</b>Octubre 2026</div>
+        <div>
+          <h3>Tu asistente personal gratuito: IA para entender la burocracia y moverte mejor por Alicante.</h3>
+          <div class="meta">60 minutos · Público general · Aula Abierta</div>
+        </div>
+      </div>
+
+      <div class="conf">
+        <div class="when"><b>02</b>Noviembre 2026</div>
+        <div>
+          <h3>Que la burocracia no frene tu cultura: IA para redactar proyectos, memorias y subvenciones.</h3>
+          <div class="meta">60 minutos · Asociaciones · Aula Abierta</div>
+        </div>
+      </div>
+
+      <div class="conf">
+        <div class="when"><b>03</b>Diciembre 2026</div>
+        <div>
+          <h3>El fin de los papeles perdidos: organiza tu vida o tu asociación con Notion.</h3>
+          <div class="meta">60 minutos · Mixto · Aula Abierta</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- ALINEACIÓN AI ACT (full width black) -->
+<section class="aiact">
+  <div class="container">
+    <div class="section-label">Alineación legal</div>
+    <h2>Cumple con el <em>Artículo 4</em> del Reglamento UE 2024/1689.</h2>
+    <p>La propuesta se alinea con el Artículo 4 del Reglamento UE 2024/1689, que obliga desde el <strong>2 de agosto de 2026</strong> a garantizar la <strong>alfabetización en IA de toda persona que la utilice</strong> dentro de una organización pública o privada.</p>
+    <div class="ref">Ref. · <b>Reglamento (UE) 2024/1689 · Art. 4 · Vigor 02-08-2026</b></div>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>¿Tu administración quiere algo <em>similar</em>?</h2>
+    <p>Adapto la propuesta a las necesidades de tu concejalía, semana cultural o programa vecinal. Respondo en menos de 48 h.</p>
+    <a href="mailto:sebastianolmedosalinas@gmail.com?subject=Propuesta%20ciclo%20divulgativo%20IA%20%2B%20Notion" class="cta-btn">Solicitar propuesta similar</a>
+  </section>
+
+  <footer>
+    <span><b>Sebastián Olmedo Salinas</b> · Consultor IT Notion + IA · NIF 55339904H · Alicante, España</span>
+    <div class="links">
+      <a href="../index.html">Inicio</a>
+      <a href="../administraciones-publicas.html">Administraciones</a>
+      <a href="../aviso-legal.html">Aviso legal</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
